@@ -8,6 +8,6 @@ class HelloWorld(StaticChallenge):
 
     async def description(self, user: str, solved: bool):
         return r8.util.media(
-            self.api_url(user, "helloworld.svg"),
+            self.api_url("helloworld.svg"),
             "The flag is <code>__flag__{test}</code>."
         )
