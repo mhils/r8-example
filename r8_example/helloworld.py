@@ -1,8 +1,7 @@
 import r8
-from r8.builtin_challenges.basic import StaticChallenge
 
 
-class HelloWorld(StaticChallenge):
+class HelloWorld(r8.Challenge):
     title = "Hello World"
     flag = "__flag__{test}"
 
