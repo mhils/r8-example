@@ -1,8 +1,6 @@
-# Import all files containing challenges here so that they self-register during import.
-from . import (
-    helloworld,
-)
+import importlib
+import pkgutil
 
-__all__ = [
-    "helloworld",
-]
+# recursively import all submodules so that challenges get registered.
+for loader, module_name, is_pkg in pkgutil.walk_packages(__path__, __name__ + "."):
+    importlib.import_module(module_name)
